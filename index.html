@@ -19,10 +19,6 @@
             ;
         }
         
-        #nav-color {
-            color: white;
-        }
-        
         .imgsize {
             width: 552px;
             height: 447px;
@@ -36,6 +32,10 @@
         .fimg {
             width: 430px;
             height: 423px;
+        }
+        
+        .grayscale {
+            filter: grayscale(70%);
         }
         
         .fixed-position {
@@ -55,17 +55,17 @@
     <header id="bgcolor">
         <!-- nav section  -->
         <nav class="navbar navbar-expand-lg navbar-light bg-none">
-            <div class="container-fluid">
+            <div class="container">
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ms-auto">
-                        <a class="nav-link text-white fw-bold" aria-current="page" href="#">Home</a>
-                        <a class="nav-link text-white fw-bold" href="#">Features</a>
-                        <a class="nav-link text-white fw-bold" href="#">Pricing</a>
-                        <a class="nav-link text-white fw-bold" href="#">Disabled</a>
+                        <a class="nav-link text-white fw-bold me-3" aria-current="page" href="#">Home</a>
+                        <a class="nav-link text-white fw-bold me-3" href="#">Features</a>
+                        <a class="nav-link text-white fw-bold me-3" href="#">Pricing</a>
+                        <a class="nav-link text-white fw-bold me-3" href="#">Disabled</a>
                     </div>
                 </div>
             </div>
@@ -120,14 +120,14 @@
             <h2 class="fw-bold text-center mt-5 ">Fetured <span class="text-danger ">Bikes 2021</span> </h2>
             <p class="text-center text-danger text-uppercase ">Best bike collection</p>
             <div class="row align-items-center justify-content-evenly mt-5 py-5 ">
-                <div class="col-md-3 ">
-                    <img src="images/feature-bike.jpg " class="img-fluid mt-sm-3 " alt=" ">
+                <div class="col-md-3 my-sm-2">
+                    <img src="images/feature-bike.jpg " class="img-fluid mt-sm-3 grayscale " alt=" ">
                 </div>
-                <div class="col-md-3 ">
+                <div class="col-md-3 my-5">
                     <img src="images/feature-bike.jpg " class="img-fluid " alt=" ">
                 </div>
-                <div class="col-md-3 ">
-                    <img src="images/feature-bike.jpg " class="img-fluid " alt=" ">
+                <div class="col-md-3 my-5">
+                    <img src="images/feature-bike.jpg " class="img-fluid  grayscale" alt=" ">
                 </div>
             </div>
         </section>
@@ -253,8 +253,7 @@
                             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance,
-                                    as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>,
-                                    though the transition does limit overflow.
+
                                 </div>
                             </div>
                         </div>
@@ -312,18 +311,19 @@
         <!-- about section over  -->
         <!-- form section  -->
         <h2 class="text-uppercase fw-bolder p-3 text-center "> <span class="text-danger ">Form</span> for <span class="text-success fw-bolder ">your opinion</span> </h2>
-        <section class="container bg-info pt-3 ">
-
-            <div class="mb-3 ">
-                <label for="exampleFormControlInput1 " class="form-label "> <span class="fw-bold text-white ">Email address</span> </label>
-                <input type="email " class="form-control " id="exampleFormControlInput1 " placeholder="name@example.com ">
-            </div>
-            <div class="mb-3 ">
-                <label for="exampleFormControlTextarea1 " class="form-label "><span class="fw-bold text-white ">Tell me  your exprience</span> </label>
-                <textarea class="form-control " id="exampleFormControlTextarea1 " rows="3 " placeholder="Tell your moner kotha#) "></textarea>
-                <div class=" fixed-position p-3 bg-dark w-25 text-md-center ">
-                    <button type="button " class="btn btn-primary btn-sm ">Reset</button>
-                    <button type="button " class="btn btn-success btn-sm ">Submit</button>
+        <section class="container bg-info pt-2">
+            <div class="form py-3">
+                <div class="mb-3 ">
+                    <label for="exampleFormControlInput1 " class="form-label "> <span class="fw-bold text-white ">Email address</span> </label>
+                    <input type="email " class="form-control " id="exampleFormControlInput1 " placeholder="name@example.com ">
+                </div>
+                <div class="mb-3 ">
+                    <label for="exampleFormControlTextarea1 " class="form-label "><span class="fw-bold text-white ">Tell me  your exprience</span> </label>
+                    <textarea class="form-control " id="exampleFormControlTextarea1 " rows="3 " placeholder="Tell your moner kotha#) "></textarea>
+                    <div class="d-grid gap-2 my-3 ">
+                        <button class="btn btn-warning" type="button">Submit</button>
+                        <button class="btn btn-success" type="button">Re-Submit</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -372,14 +372,14 @@
             <form class="row g-3 needs-validation " novalidate>
                 <div class="col-md-4 ">
                     <label for="validationCustom01 " class="form-label ">First name</label>
-                    <input placeholder="name " type=" text " class="form-control " id="validationCustom01 " value=" " required>
+                    <input placeholder="name " type=" text " class="form-control " id="validationCustom01 " aria-placeholder="First name" value=" " required>
                     <div class="valid-feedback ">
                         Looks good!
                     </div>
                 </div>
                 <div class="col-md-4 ">
                     <label for="validationCustom02 " class="form-label ">Last name</label>
-                    <input placeholder="username " type="text " class="form-control " id="validationCustom02 " value=" " required>
+                    <input placeholder="username " type="text " class="form-control " id="validationCustom02 " aria-placeholder="last name" value=" " required>
                     <div class="valid-feedback ">
                         Looks good!
                     </div>
