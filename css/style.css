@@ -20,4 +20,21 @@
 #imgsize1 {
     width: 149px;
     height: 149px;
+    margin-top: 10px;
+}
+
+.fimg {
+    width: 430px;
+    height: 423px;
+}
+
+.fixed-position {
+    margin-left: 400px;
+}
+
+.footer-area a {
+    text-decoration: none;
+    color: aliceblue;
+    margin: 40px;
+    padding-top: 5px;
 }
